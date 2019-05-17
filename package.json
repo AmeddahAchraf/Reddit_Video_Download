@@ -1,0 +1,22 @@
+{
+  "name": "reddit_video_download",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.10.3"
+  },
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "request": "^2.88.0",
+    "url-regex": "^5.0.0",
+    "popper.js": "^1.14.6"
+  }
+}
