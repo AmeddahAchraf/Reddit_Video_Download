@@ -5,7 +5,7 @@ const fetch = require("node-fetch");
 const request = require('request');
 
 const url = "https://www.reddit.com/r/BrawlStarsClips/comments/bpk3ak/id_like_to_nominate_my_teams_primo_for_best_play/";
-const _res = [1080, 710, 4810,720];
+const _res = [1080, 720, 480,'2_4_M','1_2_M];
 
 fetch(url)
     .then(res => {
