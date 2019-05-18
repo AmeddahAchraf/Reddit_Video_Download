@@ -34,7 +34,7 @@ function testUrls(mediaId) {
 function scrape(mediaId,res) {
     proc.addInput(`https://v.redd.it/${mediaId}/DASH_${res}`)
         .addInput(`https://v.redd.it/${mediaId}/audio`)
-        .output()
+        .output(`./`)
         .on("progress", progress => {
             console.log(
                 Math.round(progress.percent) + "%."
