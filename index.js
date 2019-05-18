@@ -4,8 +4,9 @@ const urlRegex = require("url-regex");
 const fetch = require("node-fetch");
 const request = require('request');
 
+//Change the URL Below
 const url = "https://www.reddit.com/r/BrawlStarsClips/comments/bpk3ak/id_like_to_nominate_my_teams_primo_for_best_play/";
-const _res = [1080, 720, 480,'2_4_M','1_2_M];
+const _res = [1080, 720, 480,'2_4_M','1_2_M'];
 
 fetch(url)
     .then(res => {
@@ -21,9 +22,11 @@ fetch(url)
     });
 
 function testUrls(mediaId) {
+    console.log('Hold on, Fetching the Best Quality')
     _res.forEach(res=>{
         request(`https://v.redd.it/${mediaId}/DASH_${res}`, (error, response, body) => {
             if(response.statusCode===200) {
+                console.log('Downloading With : '+res);
                 scrape(mediaId,res)
             }
         });
@@ -34,7 +37,7 @@ function testUrls(mediaId) {
 function scrape(mediaId,res) {
     proc.addInput(`https://v.redd.it/${mediaId}/DASH_${res}`)
         .addInput(`https://v.redd.it/${mediaId}/audio`)
-        .output(`./`)
+        .output(`./${mediaId}.mp4`)
         .on("progress", progress => {
             console.log(
                 Math.round(progress.percent) + "%."
