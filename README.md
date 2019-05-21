@@ -14,6 +14,10 @@ npm install
 node index.js
 ```
 
+- For Windows add the following command,
+```
+npm install --save @ffmpeg-installer/ffmpeg
+```
 
 ### Built With
 
