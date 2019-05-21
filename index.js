@@ -2,7 +2,7 @@ const ffmpeg = require("fluent-ffmpeg");
 const proc = new ffmpeg();
 const urlRegex = require("url-regex");
 const fetch = require("node-fetch");
-
+var oneDownload = false ;
 //Change the URL Below
 const url = "https://www.reddit.com/r/BrawlStarsClips/comments/bpk3ak/id_like_to_nominate_my_teams_primo_for_best_play/";
 const _res = [1080, 720, 480,'2_4_M','1_2_M'];
@@ -25,7 +25,8 @@ function testUrls(mediaId) {
     _res.forEach(res=>{
         fetch(`https://v.redd.it/${mediaId}/DASH_${res}`)
         .then(response =>{
-            if(response.status===200) {
+           if(response.status===200 && !oneDownload) {
+                oneDownload  = true ;
                 console.log('Downloading With : '+res +' Please Wait ...');
                 scrape(mediaId,res)
 
