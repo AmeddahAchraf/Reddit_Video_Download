@@ -20,7 +20,7 @@ if (process.argv.length >= 4) outputFolder = process.argv[3];
 
 if (!outputFolder.endsWith('/')) outputFolder += '/';
 
-const _res = [1080, 720, 480,'2_4_M','1_2_M'];
+const _res = [1080, 720, 480, 360, 240, 140, 120, '2_4_M', '1_2_M'];
 
 console.log(`Output folder > ${outputFolder}`);
 console.log(`URL > ${url}`);
