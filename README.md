@@ -8,11 +8,12 @@
 - In order to download the video with sound, you have to clone the repo and work **locally** _"For the seek of combining Video & Audio_"
 
 ```shell
-git clone https://github.com/AmeddahAchraf/Reddit_Video_Download
+git clone https://github.com/Pauloo27/Reddit_Video_Download
 cd Reddit_Video_Download
 npm install
-node index.js
+node index.js <post url> [output folder]
 ```
+*PS: The output folder is not required, the default is `./`*
 
 - For Windows add the following command,
 ```
