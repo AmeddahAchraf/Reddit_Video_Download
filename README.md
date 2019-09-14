@@ -11,7 +11,7 @@
 git clone https://github.com/AmeddahAchraf/Reddit_Video_Download
 cd Reddit_Video_Download
 npm install
-node index.js
+node index.js insertUrlHere
 ```
 
 - For Windows add the following command,
