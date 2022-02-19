@@ -64,7 +64,7 @@ function scrape(mediaId, res) {
       console.log("Done");
     });
 
-  fetch(`https://v.redd.it/${mediaId}/audio`)
+  fetch(`https://v.redd.it/${mediaId}/DASH_audio.mp4`)
     .then(resp => {
       if (resp.status === 200) {
         console.log('Founded audio track...')
